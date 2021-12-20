@@ -1,0 +1,78 @@
+.container {
+    /* y5alili el !element fel wost*/
+} 
+
+.container-fluid {
+    /* y5ali el Element width 100% */
+}
+
+          /* grid system */
+    /* type screens */
+/*
+Extra Large Screen  : xl
+Large Screen        : lg 
+meduim Screen       : md
+Small Screen        : sm
+Extra Small Screen  : xs
+*/
+
+.hidden {
+    /* ya3mel display-block lel Element fel bootstrap v4 */
+}
+
+.d-inline { /* hethi temchi fel bootstrap v5 */
+    /* y5ali el Element display inline */
+}
+        /* hehta exompel
+d- ma3neha display
+{sm,md,lg,xl}- el tay mta3 el screen
+none,block,inline-block,table,table-row,... hethi el 7aja eli n7eb ntaba9h        
+*/
+
+.clearfix {
+    /* ta3mel clear:both ama lel after */
+} /* moula7tha ken n7eb nmacheha m3a tay screen yji m3aha d-md-block kima haka
+    ( clearfix d-md-block )
+*/
+
+             /* Offset */
+.offset-3 { /* temchi 3ala el tay screen el kol */
+    /* ta3mel margin-left lel Element  */
+}
+
+.offset-lg-3 {
+    /* nejem na5tar el tay screen */
+}
+
+            /* Ordering */
+.order-md-4 {
+    /* tbadel blaset el Element  */
+}
+
+            /* Nesting */
+.img-responsive {
+    /* kenet fel bootstrap v3 */
+}
+
+.img-fluid { /* temchi fel bootstrap v5 */
+    /* i5alih yji 9ad el Element */
+}
+
+.img-thumbnail {
+    /* te5dem kima .img-fluid */
+}
+
+            /* navbar */
+.ficed-top {
+    /* t5alih fix mn fou9 */
+}
+
+.fixed-bottom {
+    /* t5alih fix mn louta */
+}
+
+            /* thama carousel fel bootstrap */
+            /* progress */
+.Progress {
+    /* el element yrodou progress */
+}

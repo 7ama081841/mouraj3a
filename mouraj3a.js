@@ -152,7 +152,10 @@ document.getElementById("test").innerHTML = "jari el ta7mil"
 }
 </script>
 
+ <script src="test.js" defer></script> // t5ali el file yeta9ra mba3d meykamel el dom el loading mte3ou
+
 .onloawd // wa9teli telicharga el page
+windo.addEventListener("DOMContentLoaded") // me temchi ken m3a addEventListener w t3aweth el onload
 
 .onclick // wa9tli el we7ed yenzel nazla wa7da 
 
@@ -592,7 +595,7 @@ variable.cloneNode("by defold false w nejem n7ot true") // t5alini na3mel copy l
 .click() // trod el button tetenzel wa7adha
 
     // Add Event Listener
-variable.addEventListener // te5dem m3a el Events
+variable.addEventListener() // te5dem m3a el Events
 
     // contains
 https://www.youtube.com/watch?v=-37OSnU52Ww&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=23

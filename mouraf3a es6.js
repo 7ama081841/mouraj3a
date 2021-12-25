@@ -251,3 +251,45 @@ mySet.clear() // tna7ili eli fel Set el kol
 mySet.has("Chaabeni".toLowerCase()) // nejem na3mel check w nejem n7ot methode m3aha
 
 // Map vs Object
+let myMap = new Map(); // bech na3mel declaration na3mel haka
+
+// hethi el method 1
+
+// bech na3mel set lel value lezem el key bin ("") nejem n7ot bolean mn8ir ("")
+myMap.set("firstName", "mohamed").set("lastName", "chaabeni").set("age", "30").set(false , 'bolean')
+
+//nejem na3mel haka 
+myMap.set("firstName", "mohamed")
+    .set("lastName", "chaabeni")
+    .set("age", "30")
+    .set(false , 'bolean')
+
+// w haka
+myMap.set("firstName", "mohamed")
+myMap.set("lastName", "chaabeni")
+myMap.set("age", "30")
+myMap.set(false , 'bolean')
+// nejem n7ot ebject
+myMap.set( {firsName : "mohemed" , age : 30 } , 'object')
+// nejem n7ot function
+myMap.set( function myFunc() {} , 'function')
+// nejem n7ot Array 
+myMap.set([1, 2, 3], 'Array')
+
+// hethi method 2
+myMap = new Map([
+    ["firstName", "mohamed"],
+    ["lastName", "chaabeni"],
+    ["age", "30"],
+]);
+
+// Map Methods
+myMap.size // ta3tini el size mta3 el Map 
+
+myMap.get("firstName") // ya3tini el value mta3 el kay
+
+myMap.has('mohamed') // ya3meli check 3al key w raja3li bolean
+
+myMap.delete("firstName") // ya3meli delete lel key 
+
+myMap.clear() // ya3mali clear lel Map  

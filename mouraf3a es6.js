@@ -292,4 +292,4 @@ myMap.has('mohamed') // ya3meli check 3al key w raja3li bolean
 
 myMap.delete("firstName") // ya3meli delete lel key 
 
-myMap.clear() // ya3mali clear lel Map  
+myMap.clear() // ya3mali clear lel Map   

@@ -188,7 +188,7 @@ css : ${css} , ${R} , ${j} and ${n} `) // this is output
 function myUser({ name, age, city, skills: { html, css, js: { ReactJs, jquery, nodeJs } } } = user) { // nafs eli 3maltou el fou9 na3mlou fel paramerer ama mn 8ir mn 7ot const
 
     console.log(` i am ${name} my age ${age} i am from ${city} my skills html : ${html} ,
-    css : ${css} ReactJs : ${ReactJs} jquery ${jquery} and nodeJs : ${ReactJs} `)
+    css : ${css} ReactJs : ${ReactJs} jquery ${jquery} and nodeJs : ${nodeJs} `)
 
 }
 
@@ -225,7 +225,7 @@ const myObj = {
 
 // Set vs Array
 const mySet = new Set([/* Element Iterable loop */])
-const mySet = new Set([1, 2, 3, 3, 5, 5]) // el far9 binha w bin el Array ki n7otelha nwamer m3awda met3awedhomch fel console
+const mySet = new Set([1, 2, 3, 3, 5, 5]) // el far9 binha w bin el Array ki n7otelha number wala string m3awdin met3awedhomch fel console
 
 console.log(mySet[1]) // el Set mete5demch bel index
 
@@ -251,7 +251,7 @@ mySet.clear() // tna7ili eli fel Set el kol
 mySet.has("Chaabeni".toLowerCase()) // nejem na3mel check w nejem n7ot methode m3aha
 
 // Map vs Object
-let myMap = new Map(); // bech na3mel declaration na3mel haka
+let myMap = new Map(); // hethi el declaration mta3 el Map
 
 // hethi el method 1
 
@@ -292,4 +292,29 @@ myMap.has('mohamed') // ya3meli check 3al key w raja3li bolean
 
 myMap.delete("firstName") // ya3meli delete lel key 
 
-myMap.clear() // ya3mali clear lel Map   
+myMap.clear() // ya3mali clear lel Map 
+
+// Symbols
+const mySymbol = Symbol(); // hethi el declaration mta3 Symbol w data type mta3ha Symbol w houma Uniqe
+
+const mySymbol = Symbol("testing"); // nejem na3mel description 
+
+
+const myObj = {
+    firsName : "mohamed",
+    lastName : "chaabeni",
+    age : 30 ,
+    [mySymbol] : "this is symbol" // el Sembol privet fel Object
+}
+
+console.log(myObj.mySymbol); // ama tetla3li fel console
+
+for (let val of Object.entries(myObj)){
+    console.log(val) // me tetla3lich fel loop 
+}
+
+console.log(Object.getOwnPropertyNames(myObj)) // me tetla3lich houni
+console.log(Object.keys(myObj)) // me tetla3lich houni
+console.log(Object.getOwnPropertySymbols(myObj)) // ama houni tetla3
+
+// Symbols Methods

@@ -295,10 +295,11 @@ myMap.delete("firstName") // ya3meli delete lel key
 myMap.clear() // ya3mali clear lel Map 
 
 // Symbols
-const mySymbol = Symbol(); // hethi el declaration mta3 Symbol w data type mta3ha Symbol w houma Uniqe
+const mySymbol1 = Symbol("testing"); // hethi el declaration mta3 Symbol w data type mta3ha Symbol w heya Uniqe
 
-const mySymbol = Symbol("testing"); // nejem na3mel description 
+const mySymbol2 = Symbol("testing"); // nejem na3mel description feha
 
+console.log(mySymbol1 === mySymbol2); // return false 5ater uniqe
 
 const myObj = {
     firsName : "mohamed",
@@ -318,3 +319,55 @@ console.log(Object.keys(myObj)) // me tetla3lich houni
 console.log(Object.getOwnPropertySymbols(myObj)) // ama houni tetla3
 
 // Symbols Methods
+const mySymbol1 = Symbol.for("testing"); // ya3mali creation Sembol 
+const mySymbol2 = Symbol.for("testing"); // ya3mali select lel Sembol 
+
+console.log(mySymbol1 === mySymbol2); // return true
+
+onsole.log(Symbol.keyFor(mySymbol2)); // return key for Symbol mete5dem ken ki na3mel Symbol.fol()
+
+// moula7tha
+p.innerHTML = mySymbol2; // menejemch na3malou affichage 5ater mahouch string
+alert(mySymbol2); // w hetha kifou 
+
+// ama nejem na3mel affichage bel keyFor kima haka
+p.innerHTML = Symbol.keyFor(mySymbol2);
+alert(Symbol.keyFor(mySymbol2));
+
+console.log(mySymbol2.description); // nejem ntala3 el description
+
+// forEach
+let arr = [1,2,3,,5]
+
+for (i = 0 ; i < arr.length ; i ++) { // hethi el loop el 3adiya 
+
+    console.log(` ${i} ${arr[i]} `) // meta3malch skeep lel empty value tjini undefined 
+
+}
+
+arr.forEach(( element , index ) => { // hethi el forEach 
+
+    console.log(` ${h} ${el} `) // ta3mali skeep lel empty value
+
+})
+
+function loop (el , i ) {
+    console.log(` ${i} ${el} `)
+}
+
+arr.forEach(loop) // nejem na3mel function w n7otha fel forEach
+
+// forEach with Set & Map
+const set = new Set([1,2,2,5])
+
+set.forEach((set ) => { // meyelzemch n7ot m3aha el index 5ater el Set mete5demch bel index
+    console.log(` ${set} `)
+})
+
+const myMap = new Map([["mohamed","chaabeni"],["sara","chaabeni"],["emna","cjaabeni"]])
+
+myMap.forEach((key , value ) => { // nejem n7ot key w value bark
+    console.log(` ${key} ${value} `) 
+})
+
+// Set vs WeakSet

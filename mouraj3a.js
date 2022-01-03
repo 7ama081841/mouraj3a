@@ -703,20 +703,18 @@ function message () { // nejem na3mal el funtioon 9bal
 }
 setTimeout( message , 4000 ); // nejem n7ot name el function bark fel setTimeout
 
-
 var myTime = setTimeout( message , 4000 ); // yelzemni n7ot el setTimeout fi variable bech ndeklareha fel clearTimeout
 
 document.getElementById("click").onclick = function () {
     clearTimeout(myTime) // elzemni n7ot esm el variable eli feha setTimeout
 }
 
-
 var myTime = setInterval( message , 1000 ); // ta3mali el function kol wa9t mo3ayen
 
 document.getElementById("click").onclick = function () {
     clearInterval(myTime) // clearInterval twa9afli el setInterval
 }
-window.open('Url','Window Name or target Attribute','Specification','Hitory Replace') ; // t4alini n7el window jdida
+window.open('Url','Window Name or target Attribute','Specification','Hitory Replace') ; // t5alini n7el window jdida
 window.open("https://www.w3schools.com", "_blank", "top=50,left=50,width=400,height=400,menubar=yes,status=no","true");
 
 window.scrollBy(x,y); // t5alini net7akem bel scroll
@@ -757,7 +755,7 @@ location.href = 'tel:58129031'
 
 location.href = 'mailto:chaabenim318@gmail.com'
 
-location.host // yjibli el hosting w nejem nbadliu 
+location.host // yjibli el hosting w nejem nbadlou 
 
 location.hash // talaa3li el hash w nejem nbadlou 
 
@@ -798,5 +796,22 @@ screen.pixelDepth // tjibli 3om9 el alwen
 document.cookie = "name=value; expires=Date; path" // t5ali el site web yet3aref 3al user
 
 document.cookie // tjibli el cookie eli 3andi
-                // moula7tha ken n7eb nfasa5 el coolie n7ot el wa9t 9bal el wa9t eli ena fih 
+    // moula7tha ken n7eb nfasa5 el coolie n7ot el wa9t 9bal el wa9t eli ena fih 
+
+    // local storage
+
+// set to local storage
+window.localStorage.setItem("ley","value") // lezemhom string
+window.localStorage.fontSize = "50px" // nejem nzid haka 
+window.localStorage["background"] = "green"
+
+// get to local storage
+window.localStorage.getItem("key")
+window.localStorage.key
+window.localStorage["key"];
+
+// remove from local storage 
+window.localStorage.removeItem("key") 
+window.localStorage.clear()
+
                             // end js bom

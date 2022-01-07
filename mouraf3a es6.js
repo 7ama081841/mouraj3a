@@ -254,7 +254,6 @@ mySet.has("Chaabeni".toLowerCase()) // nejem na3mel check w nejem n7ot methode m
 let myMap = new Map(); // hethi el declaration mta3 el Map
 
 // hethi el method 1
-
 // bech na3mel set lel value lezem el key bin ("") nejem n7ot bolean mn8ir ("")
 myMap.set("firstName", "mohamed").set("lastName", "chaabeni").set("age", "30").set(false , 'bolean')
 
@@ -269,6 +268,7 @@ myMap.set("firstName", "mohamed")
 myMap.set("lastName", "chaabeni")
 myMap.set("age", "30")
 myMap.set(false , 'bolean')
+
 // nejem n7ot ebject
 myMap.set( {firsName : "mohemed" , age : 30 } , 'object')
 // nejem n7ot function
@@ -288,7 +288,7 @@ myMap.size // ta3tini el size mta3 el Map
 
 myMap.get("firstName") // ya3tini el value mta3 el kay
 
-myMap.has('mohamed') // ya3meli check 3al key w raja3li bolean
+myMap.has('mohamed') // ta3meli check 3al key w traja3li bolean
 
 myMap.delete("firstName") // ya3meli delete lel key 
 
@@ -371,3 +371,20 @@ myMap.forEach((key , value ) => { // nejem n7ot key w value bark
 })
 
 // Set vs WeakSet
+const myWeakSet = new WeakSet() // hethi el declaration mta3 el Weaklset
+
+// hetha el deferance bin el Set wel WeakSet
+myWeakSet.size // return undefined 
+myWeakSet.keys() // return TypeError: myWeak.keysSet is not a function
+myWeakSet.add("string") // return TypeError: Invalid value 
+
+myWeakSet.forEach(el => { // menejemch na3mel forEach
+    console.log(el)
+}); // return TypeError: myWeakSet.forEach is not a function
+
+// Map vs WeakMap
+let myWeakMap = new WeakMap() // hethi el declaration mta3 WeakMap 
+
+myWeakMap.set( "a" , 1) // return  TypeError: Invalid value 5aterha te9bel ken object
+
+myWeakMap.size // return undefined

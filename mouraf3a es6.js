@@ -388,3 +388,64 @@ let myWeakMap = new WeakMap() // hethi el declaration mta3 WeakMap
 myWeakMap.set( "a" , 1) // return  TypeError: Invalid value 5aterha te9bel ken object
 
 myWeakMap.size // return undefined
+
+// Symbol Iterator / And For ... Of Loop
+let myArray = ["mohamed"] // Iterator
+let myName = "mohamed" // Iterator
+let myNumber = 5000 // not Iterator
+let myObject = {} // not Iterator
+
+console.log( typeof( myArray[Symbol.iterator])) // haka nchouf ken el element Iterator wala nn
+
+console.log( myArray[Symbol.iterator]()) // wki nzidha el () twali t5arajli object
+
+// Array wala String .next() 
+console.log(itr.next()) // { value: 'm', done: false }
+console.log(itr.next()) // { value: 'o', done: false }
+console.log(itr.next()) // { value: 'h', done: false }
+console.log(itr.next()) // { value: 'a', done: false }
+console.log(itr.next()) // { value: 'm', done: false }
+console.log(itr.next()) // { value: 'e', done: false }
+console.log(itr.next()) // { value: 'd', done: false }
+console.log(itr.next()) // { value: undefined , done: true } 5ater el loop ye9ef houni
+
+// Custom Iterable Object
+let myObject = {
+    name : "mohamed",
+    age : 30 ,
+    country : "tunis"
+}
+
+for (let p of myObject) { // ki na3mel Object w n7eb na3malou loop ya3tini errer : TypeError: myObject is not iterable
+    console.log(p)
+}
+
+let myObject = {
+    name : "mohamed",
+    age : 30 ,
+    country : "tunis" ,
+    [Symbol.iterator] () { // yelzemni na3mel method Symbol.iterator bech nrod el objeft fih iterator
+
+        let step = 0 ; // na3mel counter yebda mn index 0
+
+        let keys = Object.keys(this) // bech tjibli el key mta3 el object eli ena fih
+
+        return { // ba3d nraja3 el method next 
+
+            next() { // w fel next nraja3 value w done
+
+                return{
+                    value: keys[step] , // el step heya el index 
+                    value : myObject[keys[step]] , // ki n7eb netba3 el value mta3 el key n7ot objectName[] 
+                    done: step++ === key.length // w haka to93ed t9adem w te9ef fele5er
+                }
+
+            }
+
+        }
+
+    }
+}
+
+// Generators
+

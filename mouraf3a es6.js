@@ -448,4 +448,110 @@ let myObject = {
 }
 
 // Generators
+function * generator () { // haka na3mel generator w heya ta3mel iterator
 
+    yield 1 // yhi feha yield w meyjich feha return
+    yield 2
+    yield 3
+    yield 4
+    yield 5
+
+}
+
+function* generatorNumber(num) { // nejem na3mel generator ya3mali iterator
+    for (let i = 0; i < num.length; i++) {
+        yield num[i];
+    }
+}
+
+function * generatorNumber() {
+    yield * [10, 20, 30, 40, 50]; // nejem n7ot Array kima haka
+}
+
+// Generators functionality & return
+function * generatorBoock () {
+    
+    window.alert("you clicked on button to order a book")
+    console.log("you clicked on button to order a book")
+    
+    window.alert("you added the book to cart")
+    console.log("you added the book to cart");
+    
+    window.alert("peyment is done")
+    console.log("peyment is done")
+
+}
+
+generatorBoock().next(); // el function hethi menejem nmacheha ken haka 
+
+function * scils () {
+
+    yield "html"
+    yield "css"
+    yield "javascript"
+    yield "reactjs"
+
+}
+
+let mySkils = scils();
+
+for (let skil of mySkils) { // haka na3mel loop 3al iterator
+    console.log(skil)
+}
+
+
+for (let skil of scils()) { // haka na3mel loop 3al generator
+    console.log(skil);
+}
+
+// test return
+function* scils() {
+    yield "html";
+    yield "css";
+    return "javascript"; // el raturn ken tji fi wost el yield twa3ef el yield eli be3dha 
+    yield "reactjs";
+}
+
+// Generators Infinite Numbers
+function* infinityNumber() {
+    let i = 0; // the start
+
+    while (true) { // na3mel while bech to93ed el generator te5dem
+        yield i++;
+    }
+}
+
+for (let num of infinityNumber()) { // hethi el loop eli bech tet3ade 3al generator
+    if (num > 20) {
+        break;
+    }
+
+    console.log(num);
+}
+
+// Delegating Generators 
+function* numbers() { // generator 1 
+    yield 1;
+    yield 2;
+    yield 3;
+}
+function* names() { // generator 2
+    yield "mohamed";
+    yield "sara";
+    yield "ahmed";
+}
+
+function* generateAll() { // el generator ynoub el generator 1 w generator 2
+    yield* names();
+    yield* numbers();
+}
+
+let all = generateAll();
+
+console.log(all.next())
+console.log(all.next())
+console.log(all.next())
+console.log(all.next())
+console.log(all.next())
+console.log(all.next())
+console.log(all.next())

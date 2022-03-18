@@ -82,7 +82,6 @@ let obj1 = Object.create(mainObj) // nejem na3mel object mn object e5er
 obj1.hasDecount = true // w nejem na3malou set value 5asa bih
 
 // Object.assign
-
 const target = {
     prop : "value" 
 }

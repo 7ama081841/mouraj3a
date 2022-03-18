@@ -555,3 +555,29 @@ console.log(all.next())
 console.log(all.next())
 console.log(all.next())
 console.log(all.next())
+
+// promes
+const myPromes = new Promise( ( resolfe , reject ) => { // hethi el declaration mta3 el promis el (resolfe) ma3neha el promis t7a9e9 wel (reject) ma3neha met7a9a9ch 
+    console.log("welcome to my promis")
+}) // typeof promis => object
+
+myPromes.then ( // el then heya eli tchouf eli promis t7a9e9 ou nn
+    (resolfed) => console.log(resolfed), // hne ken el promis t7a9e9 
+    (rejected) => console.log(rejected) // hne ken el promis met7e9a9ch
+) // el then yet7at feha arrow function 
+
+const theResolved = resolved => console.log(resolved); // this is arrow function 
+const therejected = rejected => console.log(rejected);
+
+myPromise.then(theResolved , therejected); // nejem na3mel el e5tisar hetha
+
+const myPromise = new Promise( (resolve, reject) => {
+    // Only One State Allowed
+    resolve("Resolved"); // ya9rali ken el star elouleni 
+    reject("Rejected"); // hehta meyeta9rach
+})
+
+myPromise.catch( rejected => console.log(rejected) ) // el catch ta9bel ken reject ama el then te9bel el resolve wel reject
+
+myPromes.then(null , (rejected) => console.log(rejected)) // nejem nrodha tre9bel el reject bark
+
